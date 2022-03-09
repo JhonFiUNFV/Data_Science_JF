@@ -39,3 +39,5 @@ INSERT INTO directors (first_name,last_name,date_of_birth,nationality) VALUES
 ('Kar Wai','Wong','1958-07-17','Chinese'),
 ('Robert','Zemeckis','1952-05-14','American'),
 ('Yimou','Zhang','1950-04-02','Chinese');
+
+SELECT * FROM directors;
