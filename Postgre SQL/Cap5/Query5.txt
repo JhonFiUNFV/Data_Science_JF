@@ -15,3 +15,12 @@ SELECT first_name AS "firstName" FROM actors;
 SELECT movie_name AS "Movie Name", movie_lang AS "Language" FROM movies;
 --
 SELECT first_name AS 'first Name' FROM actors;
+--
+--
+SELECT first_name, last_name FROM actors;
+--
+SELECT first_name || last_name FROM actors;
+SELECT first_name ||' ' || last_name FROM actors;
+SELECT first_name ||' ' || last_name AS "Full Name" FROM actors;
+-- 
+SELECT 2*10;	
