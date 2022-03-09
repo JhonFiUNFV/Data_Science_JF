@@ -1,0 +1,47 @@
+CREATE TABLE customers(
+	customer_id SERIAL PRIMARY KEY,
+	first_name VARCHAR(50),
+	last_name VARCHAR(50),
+	email VARCHAR(150),
+	age INT
+);
+--
+SELECT * FROM customers
+--
+INSERT INTO customers(first_name, last_name, email, age)
+VALUES ('Adan', 'Walker', 'ab@mail.com', 30);
+--
+INSERT INTO customers(first_name, last_name)
+VALUES 
+('Eva', 'Walker'),
+('Juan', 'Valdez'),
+('Maria', 'Perez');
+--
+INSERT INTO customers(first_name)
+VALUES 
+('Bill''O Sullivan');
+--
+INSERT INTO customers(first_name)
+VALUES ('Vinicus');
+--
+INSERT INTO customers(first_name)
+VALUES ('Gabriel') RETURNING *;
+--
+INSERT INTO customers(first_name)
+VALUES ('Gabriela') RETURNING customer_id;
+--
+UPDATE customers
+SET email = 'a2@email.com'
+WHERE customer_id = 2
+--
+UPDATE customers
+SET
+email = 'a42@mail.com',
+age = 20
+WHERE customer_id = 3
+--
+UPDATE customers
+SET
+email = 'af43@mail.com'
+WHERE customer_id = 4
+RETURNING *;
